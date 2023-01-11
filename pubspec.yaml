@@ -36,12 +36,12 @@ dependencies:
   cupertino_icons: ^1.0.2
   permission_handler: ^8.3.0
   # awesome_notifications: ^0.7.4+1
-  http: ^0.13.5
+  # http: ^0.13.5
   flutter_local_notifications: ^13.0.0
-  device_info_plus: ^8.0.0
+  # device_info_plus: ^8.0.0
   flutter_timezone: ^1.0.4
-  path_provider: ^2.0.11
-  image: ^4.0.8
+  # path_provider: ^2.0.11
+  # image: ^4.0.8
 
 dev_dependencies:
   flutter_test:
