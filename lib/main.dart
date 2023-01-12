@@ -162,16 +162,11 @@ Future<void> main() async {
     },
     notificationCategories: darwinNotificationCategories,
   );
-  final LinuxInitializationSettings initializationSettingsLinux =
-      LinuxInitializationSettings(
-    defaultActionName: 'Open notification',
-    defaultIcon: AssetsLinuxIcon('icons/app_icon.png'),
-  );
+
   final InitializationSettings initializationSettings = InitializationSettings(
     android: initializationSettingsAndroid,
     iOS: initializationSettingsDarwin,
     macOS: initializationSettingsDarwin,
-    linux: initializationSettingsLinux,
   );
   await flutterLocalNotificationsPlugin.initialize(
     initializationSettings,
@@ -445,37 +440,6 @@ class SecondPageState extends State<SecondPage> {
                 },
                 child: const Text('Go back!'),
               ),
-            ],
-          ),
-        ),
-      );
-}
-
-class _InfoValueString extends StatelessWidget {
-  const _InfoValueString({
-    required this.title,
-    required this.value,
-    Key? key,
-  }) : super(key: key);
-
-  final String title;
-  final Object? value;
-
-  @override
-  Widget build(BuildContext context) => Padding(
-        padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
-        child: Text.rich(
-          TextSpan(
-            children: <InlineSpan>[
-              TextSpan(
-                text: '$title ',
-                style: const TextStyle(
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              TextSpan(
-                text: '$value',
-              )
             ],
           ),
         ),
